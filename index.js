@@ -16,7 +16,7 @@ var tableToExcel = (function (table, name, filename) {
 })();
 // creating pdf
 function createPDF() {
-    let pdf = new jsPDF('l', 'px', [1430, 720]);
+    let pdf = new jsPDF('l', 'pt', [1430, 720]);
         pdf.html(document.getElementById('bootstrap-data-table-export'), {
             callback: function (pdf) {
                 pdf.save('test.pdf');
