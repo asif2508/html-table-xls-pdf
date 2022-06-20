@@ -82,7 +82,7 @@
             <a  onclick="tableToExcel('bootstrap-data-table-export', 'name', 'myfile.xls')">Convert to Excel</a>
           </li>
           <li>
-            <a id="btPrint" onclick="createPDF()">Convert To Pdf</a>
+            <a id="btPrint" onclick="generate()">Convert To Pdf</a>
           </li>
         </ul>
       </div>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="bootstrap-data-table-panel">
                   <div id="div-table-data" class="table-responsive">
-                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered table-head">
                       <thead>
                         <tr>
                           <th>Artwork</th>
@@ -1555,7 +1555,11 @@
     crossorigin="anonymous"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script><!-- html2canvas 1.0.0-alpha.11 or higher version is needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js" integrity="sha512-dw+7hmxlGiOvY3mCnzrPT5yoUwN/MRjVgYV7HGXqsiXnZeqsw1H9n9lsnnPu4kL2nx2bnrjFcuWK+P3lshekwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="index.js"></script>
   
 </body>

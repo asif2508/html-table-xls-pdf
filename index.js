@@ -7,19 +7,20 @@ var tableToExcel = (function (table, name, filename) {
     return function (table, name, filename) {
         if (!table.nodeType) table = document.getElementById(table)
         var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
-
         document.getElementById("dlink").href = uri + base64(format(template, ctx));
         document.getElementById("dlink").download = filename;
+        console.log(filename);
         document.getElementById("dlink").click();
 
     }
 })();
+
 // creating pdf
-function createPDF() {
-    let pdf = new jsPDF('l', 'pt', [1430, 720]);
-        pdf.html(document.getElementById('bootstrap-data-table-export'), {
-            callback: function (pdf) {
-                pdf.save('test.pdf');
-            }
-        });
-    }
+function generate() {
+    let pdf = new jsPDF('l', 'pt', [1450,687]);
+    pdf.html(document.getElementById('bootstrap-data-table-export'), {
+        callback: function (pdf) {
+            pdf.save('test.pdf');
+        }
+    });
+}

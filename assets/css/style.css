@@ -4666,3 +4666,13 @@ h6.h1 {
   height: 100%;
   width: 100%;
 }
+.table-head th{
+  height: 112px;
+}
+@media print {
+  .table-head {
+    font-size: 14px;
+    font-family: 'Times New Roman';
+    margin:20px;
+  }
+ }
